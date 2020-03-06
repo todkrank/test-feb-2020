@@ -1,8 +1,6 @@
-#include <QCoreApplication>
 #include "test-feb-2020-qmake.h"
 
 int main(int argc, char *argv[]){
-  QCoreApplication a(argc, argv);
   std::string command;
 
   for(size_t i(0);i<MAXTHREADS;++i){
@@ -51,6 +49,6 @@ int main(int argc, char *argv[]){
   for(size_t i(0);i<MAXTHREADS;++i){
     threads.at(i).join();
   }
-  //return 0;
-  return a.exec();
+
+  return 0;
 }
